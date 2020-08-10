@@ -106,10 +106,12 @@ class UploadModal extends React.Component<Props, State> {
    * Make API request to delete SourceFile from DB and filesystem
    */
   deleteCurrentFile = (): void => {
+    /*
     if (this.state.fileId !== -1) {
       console.log('Deleted ' + this.state.fileId);
       axios.delete('/api/source-file/file/', { data: { id: this.state.fileId } });
     }
+    */
   };
 
   /**
@@ -144,6 +146,7 @@ class UploadModal extends React.Component<Props, State> {
    * Called when primary button is clicked.
    */
   onNext = (): void => {
+    /*
     if (!this.state.detailsStep) {
       this.setState({
         detailsStep: true,
@@ -187,6 +190,7 @@ class UploadModal extends React.Component<Props, State> {
           });
         });
     }
+    */
   };
 
   /**
@@ -403,19 +407,15 @@ class UploadModal extends React.Component<Props, State> {
           <Modal.Title>{modalTitle}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {errors.length > 0 && (
-            <Alert variant="danger">
-              {errors.map((val, idx) => (
-                <div key={idx}>{val}</div>
-              ))}
-            </Alert>
-          )}
+          <Alert variant="danger">
+            <div>Functionality disabled for demo purposes.</div>
+          </Alert>
           {detailsStep ? (
             <UploadModalForm artist={artist} title={title} handleChange={this.onDetailFieldChange} />
           ) : (
             <div>
               <Dropzone
-                disabled={!!link}
+                disabled={true}
                 maxFiles={1}
                 maxSizeBytes={MAX_FILE_BYTES}
                 multiple={false}
