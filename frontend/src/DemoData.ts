@@ -246,9 +246,84 @@ export const DemoData = [
     },
     date_created: '2020-08-01T02:13:56.435893Z',
   },
+  {
+    id: '078f26c7-ff01-48d2-90e9-cd70d1ff7441',
+    source_file: 'c5072760-5e4b-4200-b8df-156d2b29b0a5',
+    url:
+      'https://spleeterstorage.blob.core.windows.net/media/uploads/c5072760-5e4b-4200-b8df-156d2b29b0a5/jay-z-empire-state-of-mind.m4a',
+    artist: 'Jay-Z',
+    title: 'Empire State Of Mind',
+    static: [
+      {
+        id: 'f760ceb5-5f51-45c1-9d1d-df7bafa43583',
+        source_track: '078f26c7-ff01-48d2-90e9-cd70d1ff7441',
+        artist: 'Jay-Z',
+        title: 'Empire State Of Mind',
+        vocals: false,
+        drums: true,
+        bass: false,
+        other: false,
+        status: 'Done',
+        url:
+          'https://spleeterstorage.blob.core.windows.net/media/separate/f760ceb5-5f51-45c1-9d1d-df7bafa43583/jay-z-empire-state-of-mind-drums.mp3',
+        error: '',
+        date_created: '2020-08-12T01:54:42.249727Z',
+      },
+      {
+        id: '764a87f9-26fc-41ee-8bb5-fa45b63d4793',
+        source_track: '078f26c7-ff01-48d2-90e9-cd70d1ff7441',
+        artist: 'Jay-Z',
+        title: 'Empire State Of Mind',
+        vocals: true,
+        drums: true,
+        bass: false,
+        other: false,
+        status: 'Done',
+        url:
+          'https://spleeterstorage.blob.core.windows.net/media/separate/764a87f9-26fc-41ee-8bb5-fa45b63d4793/jay-z-empire-state-of-mind-vocals-drums.mp3',
+        error: '',
+        date_created: '2020-08-12T01:54:48.184559Z',
+      },
+    ],
+    dynamic: {
+      id: 'f9d4740d-4fa9-488b-bfa4-05ac9cbf50c4',
+      source_track: '078f26c7-ff01-48d2-90e9-cd70d1ff7441',
+      artist: 'Jay-Z',
+      title: 'Empire State Of Mind',
+      vocals_file:
+        'https://spleeterstorage.blob.core.windows.net/media/separate/f9d4740d-4fa9-488b-bfa4-05ac9cbf50c4/vocals.mp3',
+      other_file:
+        'https://spleeterstorage.blob.core.windows.net/media/separate/f9d4740d-4fa9-488b-bfa4-05ac9cbf50c4/other.mp3',
+      bass_file:
+        'https://spleeterstorage.blob.core.windows.net/media/separate/f9d4740d-4fa9-488b-bfa4-05ac9cbf50c4/bass.mp3',
+      drums_file:
+        'https://spleeterstorage.blob.core.windows.net/media/separate/f9d4740d-4fa9-488b-bfa4-05ac9cbf50c4/drums.mp3',
+      status: 'Done',
+      error: '',
+      date_created: '2020-08-12T01:54:58.266858Z',
+    },
+    date_created: '2020-08-12T01:53:54.918928Z',
+  },
 ];
 
 export const MixData = {
+  'f9d4740d-4fa9-488b-bfa4-05ac9cbf50c4': {
+    id: 'f9d4740d-4fa9-488b-bfa4-05ac9cbf50c4',
+    source_track: '078f26c7-ff01-48d2-90e9-cd70d1ff7441',
+    artist: 'Jay-Z',
+    title: 'Empire State Of Mind',
+    vocals_file:
+      'https://spleeterstorage.blob.core.windows.net/media/separate/f9d4740d-4fa9-488b-bfa4-05ac9cbf50c4/vocals.mp3',
+    other_file:
+      'https://spleeterstorage.blob.core.windows.net/media/separate/f9d4740d-4fa9-488b-bfa4-05ac9cbf50c4/other.mp3',
+    bass_file:
+      'https://spleeterstorage.blob.core.windows.net/media/separate/f9d4740d-4fa9-488b-bfa4-05ac9cbf50c4/bass.mp3',
+    drums_file:
+      'https://spleeterstorage.blob.core.windows.net/media/separate/f9d4740d-4fa9-488b-bfa4-05ac9cbf50c4/drums.mp3',
+    status: 'Done',
+    error: '',
+    date_created: '2020-08-12T01:54:58.266858Z',
+  },
   '03d15081-c8a5-44f9-a985-715969e66e03': {
     id: '03d15081-c8a5-44f9-a985-715969e66e03',
     source_track: 'f08a03b6-1153-42ab-8d09-ce1d243d0fbb',
