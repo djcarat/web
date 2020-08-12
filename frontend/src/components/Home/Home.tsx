@@ -327,7 +327,7 @@ class Home extends React.Component<RouteComponentProps, State> {
             {task && (
               <Alert variant="success">
                 <span>
-                  <a target="_blank" rel="noreferrer" href={`/api/mix/static/${task.id}`}>
+                  <a target="_blank" rel="noopener noreferrer" href={`/api/mix/static/${task.id}`}>
                     {task.id}
                   </a>
                   : {task.status}
