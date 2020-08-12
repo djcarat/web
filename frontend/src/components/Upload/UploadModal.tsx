@@ -135,11 +135,13 @@ class UploadModal extends React.Component<Props, State> {
    * Called when back button is clicked.
    */
   onBack = (): void => {
+    /*
     if (this.state.detailsStep) {
       this.setState({
         detailsStep: false,
       });
     }
+    */
   };
 
   /**
@@ -198,6 +200,7 @@ class UploadModal extends React.Component<Props, State> {
    * @param query Query string
    */
   youtubeSearch = (query: string): void => {
+    /*
     this.setState({
       fetchStatus: YouTubeFetchStatus.IS_FETCHING,
     });
@@ -222,6 +225,7 @@ class UploadModal extends React.Component<Props, State> {
           fetchStatus: YouTubeFetchStatus.ERROR,
         });
       });
+    */
   };
 
   /**
@@ -233,6 +237,7 @@ class UploadModal extends React.Component<Props, State> {
    * Called when artist or title fields change.
    */
   onDetailFieldChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    /*
     event.preventDefault();
     const { name, value } = event.target;
 
@@ -240,12 +245,14 @@ class UploadModal extends React.Component<Props, State> {
       this.resetErrors();
       this.setState({ [name]: value } as any);
     }
+    */
   };
 
   /**
    * Called when value of YouTube search text field changes.
    */
   onYouTubeFieldChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    /*
     event.preventDefault();
     const { name, value } = event.target;
 
@@ -303,12 +310,14 @@ class UploadModal extends React.Component<Props, State> {
           }
         });
     }
+    */
   };
 
   /**
    * Called when file upload status changes.
    */
   onFileUploadStatusChange = ({ meta, remove, xhr }: IFileWithMeta, status: StatusValue): void => {
+    /*
     const aborted =
       status === 'aborted' ||
       status === 'rejected_file_type' ||
@@ -358,6 +367,7 @@ class UploadModal extends React.Component<Props, State> {
         });
       }
     }
+    */
   };
 
   /**
@@ -365,12 +375,14 @@ class UploadModal extends React.Component<Props, State> {
    * @param video Video that was clicked
    */
   onSearchResultClick = (video: YouTubeVideo): void => {
+    /*
     this.setState({
       artist: he.decode(video.parsed_artist),
       title: he.decode(video.parsed_title),
       link: getYouTubeLinkForId(video.id),
       detailsStep: true,
     });
+    */
   };
 
   render(): JSX.Element {
@@ -415,20 +427,20 @@ class UploadModal extends React.Component<Props, State> {
           ) : (
             <div>
               <Dropzone
-                disabled={true}
+                disabled
                 maxFiles={1}
                 maxSizeBytes={MAX_FILE_BYTES}
                 multiple={false}
                 accept={ALLOWED_EXT}
                 onChangeStatus={this.onFileUploadStatusChange}
-                getUploadParams={() => ({ url: '/api/source-file/file/' })}
+                // getUploadParams={() => ({ url: '/api/source-file/file/' })}
                 InputComponent={CustomInput}
                 PreviewComponent={CustomPreview}
               />
               <hr className="hr-text" data-content="OR" />
               <YouTubeForm
                 fetchStatus={fetchStatus}
-                disabled={droppedFile}
+                disabled
                 value={query || link}
                 searchResponse={searchResponse}
                 handleChange={this.onYouTubeFieldChange}
